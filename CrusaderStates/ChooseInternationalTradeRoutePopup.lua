@@ -8,7 +8,6 @@ include( "InstanceManager" );
 include( "CommonBehaviors" );
 include( "TradeRouteHelpers" );
 include( "HolyLandRules" );
-include( "HolyLandTradeDisplay" );
 
 local CIVILIZATION_JERUSALEM = assert(
 	GameInfoTypes.CIVILIZATION_JERUSALEM,
@@ -183,26 +182,19 @@ function RefreshData()
 		
 		for j,u in ipairs(v.Yields) do
 			local iYield = j - 1;
-			local displayedMineYield =
-				HolyLandTradeDisplay.GetDisplayedMineYield(
-					iYield,
-					u.Mine,
-					hasHolyLandBonus,
-					YieldTypes.YIELD_GOLD
-				);
 			
 			if(iYield == YieldTypes.YIELD_GOLD) then
-				tradeRoute.Gold = displayedMineYield;
-				tradeRoute.GoldDelta = displayedMineYield - u.Theirs;
+				tradeRoute.Gold = u.Mine;
+				tradeRoute.GoldDelta = u.Mine - u.Theirs;
 			elseif (iYield == YieldTypes.YIELD_SCIENCE) then
-				tradeRoute.Science = displayedMineYield;
-				tradeRoute.ScienceDelta = displayedMineYield - u.Theirs;
+				tradeRoute.Science = u.Mine;
+				tradeRoute.ScienceDelta = u.Mine - u.Theirs;
 			end
 			
 			local entry = BonusTips[iYield];
 			if(entry ~= nil) then
-				if(displayedMineYield ~= 0) then
-					table.insert(myBonuses, "[ICON_ARROW_LEFT] " .. Locale.Lookup(entry, displayedMineYield / 100));
+				if(u.Mine ~= 0) then
+					table.insert(myBonuses, "[ICON_ARROW_LEFT] " .. Locale.Lookup(entry, u.Mine / 100));
 				end
 				
 				if(u.Theirs ~= 0) then
@@ -241,19 +233,12 @@ function RefreshData()
 		
 		tradeRoute.Bonuses = strOutput;
 		tradeRoute.TargetPlayerId = pTargetPlayer:GetID();
-		tradeRoute.ToolTip =
-			HolyLandTradeDisplay.AppendTooltip(
-				BuildTradeRouteToolTipString(
-					pPlayer,
-					pOriginCity,
-					pTargetCity,
-					eDomain
-				),
-				Locale.Lookup(
-					"TXT_KEY_JERUSALEM_HOLY_LAND_ROUTE_PICKER_TOOLTIP"
-				),
-				hasHolyLandBonus
-			);
+		tradeRoute.ToolTip = BuildTradeRouteToolTipString(
+			pPlayer,
+			pOriginCity,
+			pTargetCity,
+			eDomain
+		);
 		tradeRoute.eDomain = eDomain;
 		
 		if (v.OldTradeRoute) then

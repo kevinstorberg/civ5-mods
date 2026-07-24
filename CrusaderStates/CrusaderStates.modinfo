@@ -60,11 +60,10 @@
     <File md5="b2da555da77ad1cb4e96482511ec09a8" import="1">Art/Jerusalem_Atlas80.dds</File>
     <File md5="adcd0cb63c47c1b3ae30c0e6f9400671" import="1">Art/Jerusalem_DOM.dds</File>
     <File md5="014830e159601bc9582aa89bdb90d344" import="1">Art/MapJerusalem.dds</File>
-    <File md5="a4e9745cff900663a8e8b05d7e331ba9" import="1">ChooseInternationalTradeRoutePopup.lua</File>
+    <File md5="253e34ef4b2a8354e467e2df42c24fc5" import="1">ChooseInternationalTradeRoutePopup.lua</File>
     <File md5="d5f3d83617b831285e062f7ee3a78873" import="0">SQL/Jerusalem.sql</File>
-    <File md5="46c530d29f730f9f206e144efb4a45d6" import="0">Text_en_US.xml</File>
+    <File md5="68bf1f46bd2ca90d002ec971135118e7" import="0">Text_en_US.xml</File>
     <File md5="9872ccad09da42cc0d4634692204df9b" import="1">Lua/HolyLandRules.lua</File>
-    <File md5="c950da8ab0500dfdcd756844b2c0812b" import="1">Lua/HolyLandTradeDisplay.lua</File>
     <File md5="d2803838af78ac7fdf2879a55f3e1c1a" import="0">Lua/Jerusalem.lua</File>
   </Files>
   <Actions>
