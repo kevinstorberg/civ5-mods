@@ -1,24 +1,16 @@
-# Crusader States — Kingdom of Jerusalem
+# Civ V Mods
 
-A personal mod for **Sid Meier's Civilization V (Brave New World)** that adds the
-**Kingdom of Jerusalem**, led by **Baldwin IV**, as a playable civilization.
+My personal mods for **Sid Meier's Civilization V (Brave New World)**.
 
-Supports Culturally Linked Start Locations and Ethnic Diversity.
+Each mod lives in its own folder. This repo sits in the game's live `MODS`
+directory, so the game loads each mod natively while it stays version-controlled.
 
-## Status
+## Mods
 
-Alpha.
+- **[CrusaderStates](CrusaderStates/)** — Kingdom of Jerusalem, led by Baldwin IV.
 
-## Requires
+## Adding a mod
 
-- Brave New World DLC
-
-## Optional (enhances, not required)
-
-- Culturally Linked Start Locations (v4+)
-- Ethnic Diversity — Steam version (v29+)
-- Ethnic Units (v31+)
-
-## Author
-
-Kevin Storberg
+1. Create the mod folder here (e.g. `MODS/MyMod/`).
+2. Add `!/MyMod/` to `.gitignore` so it's tracked.
+3. Commit and push.

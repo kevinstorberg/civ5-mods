@@ -1,1 +1,8 @@
-.DS_Store
+# This is the live Civ V MODS folder, which also holds third-party Steam
+# Workshop mods. Ignore everything by default and track only my own mods.
+/*
+
+# Repository metadata and personal mods (add a new "!/ModName/" line per mod).
+!/.gitignore
+!/README.md
+!/CrusaderStates/
