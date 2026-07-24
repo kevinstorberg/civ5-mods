@@ -34,10 +34,16 @@
 		<Row Tag="TXT_KEY_TRAIT_HOLY_LAND">
 			<Text>Holy Land</Text>
 		</Row>
-		<Row Tag="TXT_KEY_TRAIT_HOLY_LAND_DESCRIPTION">
-			<Text>Foreign trade partners following your religion grant +2 [ICON_PEACE] Faith and +4 [ICON_GOLD] Gold each.</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_JERUSALEM_HOLY_LAND_YIELDS">
+			<Row Tag="TXT_KEY_TRAIT_HOLY_LAND_DESCRIPTION">
+				<Text>Foreign trade partners following your religion grant +2 [ICON_PEACE] Faith and +4 [ICON_GOLD] Gold each.</Text>
+			</Row>
+			<Row Tag="TXT_KEY_JERUSALEM_HOLY_LAND_ROUTE_PICKER_BONUS">
+				<Text>Holy Land: +2 [ICON_PEACE] Faith; +4 [ICON_GOLD] Gold included above.</Text>
+			</Row>
+			<Row Tag="TXT_KEY_JERUSALEM_HOLY_LAND_ROUTE_PICKER_TOOLTIP">
+				<Text>Holy Land grants +2 [ICON_PEACE] Faith and +4 [ICON_GOLD] Gold for this destination.</Text>
+			</Row>
+			<Row Tag="TXT_KEY_BUILDING_JERUSALEM_HOLY_LAND_YIELDS">
 			<Text>Holy Land Trade Yields</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_JERUSALEM_HOLY_LAND_YIELDS_HELP">

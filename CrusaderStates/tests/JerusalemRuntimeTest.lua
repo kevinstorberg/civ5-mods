@@ -264,7 +264,16 @@ assert(
 	arg and type(arg[1]) == "string" and arg[1] ~= "",
 	"Usage: texlua JerusalemRuntimeTest.lua <path-to-Jerusalem.lua>"
 )
-dofile(arg[1])
+local gameplayPath = arg[1]
+local gameplayDirectory = gameplayPath:match("^(.*[/\\])") or ""
+include = function(moduleName)
+	assert(
+		moduleName == "HolyLandRules",
+		"unexpected gameplay include: " .. tostring(moduleName)
+	)
+	dofile(gameplayDirectory .. moduleName .. ".lua")
+end
+dofile(gameplayPath)
 
 jerusalemOutpost.buildings[
 	TYPE_IDS.BUILDING_JERUSALEM_HOLY_LAND_YIELDS

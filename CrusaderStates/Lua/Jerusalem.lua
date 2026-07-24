@@ -34,14 +34,24 @@ local PANTHEON_RELIGION = assert(
 )
 local HOLY_CITY_RADIUS = 3
 
+include("HolyLandRules")
+assert(
+	HolyLandRules,
+	"Kingdom of Jerusalem: Holy Land rules failed to load"
+)
+
 local function isFullReligion(religionID)
-	return religionID ~= nil and religionID > PANTHEON_RELIGION
+	return HolyLandRules.IsFullReligion(
+		religionID,
+		PANTHEON_RELIGION
+	)
 end
 
 local function isLivingJerusalemPlayer(player)
-	return player ~= nil
-		and player:IsAlive()
-		and player:GetCivilizationType() == CIVILIZATION_JERUSALEM
+	return HolyLandRules.IsLivingJerusalemPlayer(
+		player,
+		CIVILIZATION_JERUSALEM
+	)
 end
 
 local function getJerusalemReligion(player)
@@ -50,52 +60,18 @@ local function getJerusalemReligion(player)
 		"Kingdom of Jerusalem: religion requested for an invalid player"
 	)
 
-	local foundedReligion = player:GetReligionCreatedByPlayer()
-	if isFullReligion(foundedReligion) then
-		return foundedReligion
-	end
-
-	local capital = player:GetCapitalCity()
-	if capital then
-		local majorityReligion = capital:GetReligiousMajority()
-		if isFullReligion(majorityReligion) then
-			return majorityReligion
-		end
-	end
-
-	return nil
+	return HolyLandRules.GetJerusalemReligion(
+		player,
+		CIVILIZATION_JERUSALEM,
+		PANTHEON_RELIGION
+	)
 end
 
 local function getFollowedReligion(player)
-	if not player or not player:IsAlive() then
-		return nil
-	end
-
-	local capital = player:GetCapitalCity()
-	if not capital then
-		return nil
-	end
-
-	local majorityReligion = capital:GetReligiousMajority()
-	if isFullReligion(majorityReligion) then
-		return majorityReligion
-	end
-
-	return nil
-end
-
-local function isEligibleTradePartner(ownerID, destinationID)
-	if destinationID == nil
-		or destinationID < 0
-		or destinationID == ownerID
-	then
-		return false
-	end
-
-	local destinationPlayer = Players[destinationID]
-	return destinationPlayer ~= nil
-		and destinationPlayer:IsAlive()
-		and not destinationPlayer:IsBarbarian()
+	return HolyLandRules.GetFollowedReligion(
+		player,
+		PANTHEON_RELIGION
+	)
 end
 
 local function computeHolyLandPartners(player, jerusalemReligion)
@@ -111,11 +87,15 @@ local function computeHolyLandPartners(player, jerusalemReligion)
 		if fromCity
 			and toCity
 			and fromCity:GetOwner() == ownerID
-			and isEligibleTradePartner(ownerID, toCity:GetOwner())
 		then
 			local destinationID = toCity:GetOwner()
 			local destinationPlayer = Players[destinationID]
-			if getFollowedReligion(destinationPlayer) == jerusalemReligion then
+			if HolyLandRules.IsQualifyingPartner(
+				player,
+				destinationPlayer,
+				jerusalemReligion,
+				PANTHEON_RELIGION
+			) then
 				partners[destinationID] = true
 			end
 		end
