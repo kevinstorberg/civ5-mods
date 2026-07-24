@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="9cadbb34-1e99-42a7-85f5-20ab9761290d" version="1">
+  <Properties>
+    <Name>Kingdom of Jerusalem</Name>
+    <Stability>Alpha</Stability>
+    <Teaser>Lead the Kingdom of Jerusalem under Baldwin IV.</Teaser>
+    <Description>Adds the Kingdom of Jerusalem, led by Baldwin IV, as a playable civilization for Brave New World. Supports Culturally Linked Start Locations and Ethnic Diversity.</Description>
+    <Authors>Kevin Storberg</Authors>
+    <HideSetupGame>0</HideSetupGame>
+    <AffectsSavedGames>1</AffectsSavedGames>
+    <MinCompatibleSaveVersion>0</MinCompatibleSaveVersion>
+    <SupportsSinglePlayer>1</SupportsSinglePlayer>
+    <SupportsMultiplayer>0</SupportsMultiplayer>
+    <SupportsHotSeat>0</SupportsHotSeat>
+    <SupportsMac>1</SupportsMac>
+    <ReloadAudioSystem>0</ReloadAudioSystem>
+    <ReloadLandmarkSystem>0</ReloadLandmarkSystem>
+    <ReloadStrategicViewSystem>0</ReloadStrategicViewSystem>
+    <ReloadUnitSystem>0</ReloadUnitSystem>
+  </Properties>
+  <Dependencies>
+    <Dlc id="6DA07636-4123-4018-B643-6575B4EC336B" minversion="0" maxversion="999" />
+  </Dependencies>
+  <!-- Optional load-order hints: Jerusalem remains fully playable when any referenced mod is inactive. -->
+  <References>
+    <Mod id="01ef72bd-a570-49f1-af19-5afef495515e" minversion="4" maxversion="999" title="Culturally Linked Start Locations" />
+    <Mod id="5f4c1c74-5c6a-47d0-97c4-45b15ca3bdd9" minversion="29" maxversion="999" title="Ethnic Diversity - Steam version" />
+    <Mod id="7fdd72a5-d4ae-441c-bc4e-2e3d2a26cff4" minversion="31" maxversion="999" title="Ethnic Units" />
+  </References>
+  <Blocks />
+  <Files>
+    <File md5="395edb6ab39e7f25169921f84af7347e" import="1">Art/BaldwinIV_scene.dds</File>
+    <File md5="8c01567e2f9c07fb5b1ba505302530de" import="1">Art/BaldwinIV_scene.xml</File>
+    <File md5="da66668e717788fb3f9ffee63c23f659" import="1">Art/Jerusalem_Alpha128.dds</File>
+    <File md5="d5e5c79427f7d0341e6874402d402c92" import="1">Art/Jerusalem_Alpha16.dds</File>
+    <File md5="e6db32ca9b26cbf107e7feda135492a2" import="1">Art/Jerusalem_Alpha24.dds</File>
+    <File md5="ecab05b8fe531e21406f7f3ef2a1d78b" import="1">Art/Jerusalem_Alpha256.dds</File>
+    <File md5="d1cc619558cdc1600604412c8f3b751f" import="1">Art/Jerusalem_Alpha32.dds</File>
+    <File md5="7fa8bda39979a734ca339d70c354933a" import="1">Art/Jerusalem_Alpha45.dds</File>
+    <File md5="8b687b8a99624c7679733df41fd8fbf0" import="1">Art/Jerusalem_Alpha48.dds</File>
+    <File md5="7eba6902af7d9b64538bf058cc3c3414" import="1">Art/Jerusalem_Alpha64.dds</File>
+    <File md5="25b006d2040ce5b461f417e924f15db3" import="1">Art/Jerusalem_Alpha80.dds</File>
+    <File md5="10fe141a015c35f80e2f8383be82307e" import="1">Art/Jerusalem_Atlas128.dds</File>
+    <File md5="6e18208761329c0bbe48a2231befbc9c" import="1">Art/Jerusalem_Atlas16.dds</File>
+    <File md5="ac436825e6905688155710ecc3b0beb5" import="1">Art/Jerusalem_Atlas24.dds</File>
+    <File md5="9517da0ceab945e19388a73f5aa27450" import="1">Art/Jerusalem_Atlas256.dds</File>
+    <File md5="9ffc072f7d3d1a7fca87932d47a03699" import="1">Art/Jerusalem_Atlas32.dds</File>
+    <File md5="15ea890017c1e122d08d919589ffc896" import="1">Art/Jerusalem_Atlas45.dds</File>
+    <File md5="80fc17b8fabb78560317e656c1f3eb69" import="1">Art/Jerusalem_Atlas48.dds</File>
+    <File md5="9564a6868f0092defa950050acbcc386" import="1">Art/Jerusalem_Atlas64.dds</File>
+    <File md5="b2da555da77ad1cb4e96482511ec09a8" import="1">Art/Jerusalem_Atlas80.dds</File>
+    <File md5="adcd0cb63c47c1b3ae30c0e6f9400671" import="1">Art/Jerusalem_DOM.dds</File>
+    <File md5="014830e159601bc9582aa89bdb90d344" import="1">Art/MapJerusalem.dds</File>
+    <File md5="dd3bf38c42c527c200bf7d3c4791ae5f" import="0">SQL/Jerusalem.sql</File>
+    <File md5="9a029016923bf8f3ec6622098675b0e8" import="0">Text_en_US.xml</File>
+    <File md5="747f0f97c7dd0aa9a75abe371984ada4" import="0">Lua/Jerusalem.lua</File>
+  </Files>
+  <Actions>
+    <OnModActivated>
+      <UpdateDatabase>SQL/Jerusalem.sql</UpdateDatabase>
+      <UpdateDatabase>Text_en_US.xml</UpdateDatabase>
+    </OnModActivated>
+  </Actions>
+  <EntryPoints>
+    <EntryPoint type="InGameUIAddin" file="Lua/Jerusalem.lua">
+      <Name>Kingdom of Jerusalem Gameplay</Name>
+      <Description>Implements the Holy Land and Crusader mechanics.</Description>
+    </EntryPoint>
+  </EntryPoints>
+</Mod>

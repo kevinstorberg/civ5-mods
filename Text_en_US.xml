@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<GameData>
+		<Language_en_US>
+			<Row Tag="TXT_KEY_CIV_JERUSALEM_DESC">
+				<Text>Kingdom of Jerusalem</Text>
+			</Row>
+		<Row Tag="TXT_KEY_CIV_JERUSALEM_SHORT_DESC">
+			<Text>Jerusalem</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV_JERUSALEM_ADJECTIVE">
+			<Text>Jerusalemite</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV_JERUSALEM_PEDIA">
+			<Text>The Kingdom of Jerusalem was a Latin Christian state established in the Levant after the First Crusade. Under Baldwin IV, the kingdom resisted the growing power of Saladin despite the king's severe illness.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIVILOPEDIA_CIVILIZATIONS_JERUSALEM">
+			<Text>The Kingdom of Jerusalem</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV_JERUSALEM_STRATEGY">
+			<Text>Jerusalem prospers by spreading its religion to foreign trade partners and defending the Holy Land with Crusaders.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV_JERUSALEM_DOM">
+			<Text>Baldwin IV, Leper King of Jerusalem, your courage has preserved the Holy City against impossible odds. Build bonds of faith across the seas, defend the sacred places, and let Jerusalem endure through the ages.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_LEADER_BALDWIN_IV">
+			<Text>Baldwin IV</Text>
+		</Row>
+		<Row Tag="TXT_KEY_LEADER_BALDWIN_IV_PEDIA">
+			<Text>Baldwin IV (1161–1185), known as the Leper King, ruled Jerusalem from 1174 until his death. Despite leprosy and intense political pressure, he repeatedly took the field against Saladin and won his most famous victory at Montgisard in 1177.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIVILOPEDIA_LEADERS_BALDWIN_IV">
+			<Text>Baldwin IV</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TRAIT_HOLY_LAND">
+			<Text>Holy Land</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TRAIT_HOLY_LAND_DESCRIPTION">
+			<Text>Foreign trade partners following your religion grant +2 [ICON_PEACE] Faith and +4 [ICON_GOLD] Gold each.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_JERUSALEM_HOLY_LAND_YIELDS">
+			<Text>Holy Land Trade Yields</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_JERUSALEM_HOLY_LAND_YIELDS_HELP">
+			<Text>Provides +2 [ICON_PEACE] Faith and +4 [ICON_GOLD] Gold for one qualifying foreign trade partner.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_JERUSALEM_HOLY_SEPULCHER">
+			<Text>Holy Sepulcher</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_JERUSALEM_HOLY_SEPULCHER_PEDIA">
+			<Text>The Church of the Holy Sepulcher stands in Jerusalem over sites traditionally identified with the crucifixion, burial, and resurrection of Jesus.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_JERUSALEM_HOLY_SEPULCHER_STRATEGY">
+			<Text>The Holy Sepulcher replaces the Palace. It retains all normal Palace effects, provides +1 Faith, and doubles religious pressure from the capital.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_JERUSALEM_HOLY_SEPULCHER_HELP">
+			<Text>Replaces the Palace. Retains all normal Palace effects, provides +1 [ICON_PEACE] Faith, and doubles religious pressure from the capital.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_JERUSALEM_CRUSADER">
+			<Text>Crusader</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_JERUSALEM_CRUSADER_PEDIA">
+			<Text>Crusaders were Latin Christian warriors who fought to establish and defend the Crusader states of the Levant.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_JERUSALEM_CRUSADER_STRATEGY">
+			<Text>The Crusader replaces the Longswordsman. It is strongest near Holy Cities, in territory where Jerusalem's religion is the majority, and near heathen enemy forces. Only active bonuses appear in the unit panel, and Deus Vult remains after upgrading.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_JERUSALEM_CRUSADER_HELP">
+			<Text>Replaces the Longswordsman. Receives +15% [ICON_STRENGTH] Combat Strength within 3 tiles of a Holy City, +15% in territory where Jerusalem's religion is the majority, and +15% while adjacent to barbarians or to forces or a city of an at-war major civilization whose capital does not follow Jerusalem's religion. Bonuses stack, appear as promotions only while active, and remain available after upgrading.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_JERUSALEM_CRUSADER_LINEAGE">
+			<Text>Deus Vult</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_JERUSALEM_CRUSADER_LINEAGE_HELP">
+			<Text>Crusaders answer the call: +15% [ICON_STRENGTH] Combat Strength within 3 tiles of any Holy City; +15% in territory where Jerusalem's religion is the majority; and +15% while adjacent to barbarians or to forces or a city of an at-war major civilization whose capital does not follow Jerusalem's religion. These bonuses stack and remain available after upgrading.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_JERUSALEM_CRUSADER_HOLY_CITY">
+			<Text>Holy City</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_JERUSALEM_CRUSADER_HOLY_CITY_HELP">
+			<Text>+15% [ICON_STRENGTH] Combat Strength within 3 tiles of any Holy City.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_JERUSALEM_CRUSADER_RELIGIOUS_TERRITORY">
+			<Text>Holy Land</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_JERUSALEM_CRUSADER_RELIGIOUS_TERRITORY_HELP">
+			<Text>+15% [ICON_STRENGTH] Combat Strength in territory where Jerusalem's religion is the majority.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_JERUSALEM_CRUSADER_DIFFERENT_RELIGION">
+			<Text>Holy War</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_JERUSALEM_CRUSADER_DIFFERENT_RELIGION_HELP">
+			<Text>+15% [ICON_STRENGTH] Combat Strength while adjacent to barbarians or to forces or a city of an at-war major civilization whose capital does not follow Jerusalem's religion.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SPY_NAME_JERUSALEM_0"><Text>Balian</Text></Row>
+		<Row Tag="TXT_KEY_SPY_NAME_JERUSALEM_1"><Text>Raymond</Text></Row>
+		<Row Tag="TXT_KEY_SPY_NAME_JERUSALEM_2"><Text>Joscelin</Text></Row>
+		<Row Tag="TXT_KEY_SPY_NAME_JERUSALEM_3"><Text>William</Text></Row>
+		<Row Tag="TXT_KEY_SPY_NAME_JERUSALEM_4"><Text>Gerard</Text></Row>
+		<Row Tag="TXT_KEY_SPY_NAME_JERUSALEM_5"><Text>Sibylla</Text></Row>
+		<Row Tag="TXT_KEY_SPY_NAME_JERUSALEM_6"><Text>Isabella</Text></Row>
+		<Row Tag="TXT_KEY_SPY_NAME_JERUSALEM_7"><Text>Melisende</Text></Row>
+		<Row Tag="TXT_KEY_SPY_NAME_JERUSALEM_8"><Text>Agnes</Text></Row>
+		<Row Tag="TXT_KEY_SPY_NAME_JERUSALEM_9"><Text>Stephanie</Text></Row>
+		<Row Tag="TXT_KEY_JERUSALEM_CITY_JERUSALEM"><Text>Jerusalem</Text></Row>
+		<Row Tag="TXT_KEY_JERUSALEM_CITY_ANTIOCH"><Text>Antioch</Text></Row>
+		<Row Tag="TXT_KEY_JERUSALEM_CITY_ACRE"><Text>Acre</Text></Row>
+		<Row Tag="TXT_KEY_JERUSALEM_CITY_EDESSA"><Text>Edessa</Text></Row>
+		<Row Tag="TXT_KEY_JERUSALEM_CITY_TRIPOLI"><Text>Tripoli</Text></Row>
+		<Row Tag="TXT_KEY_JERUSALEM_CITY_ASCALON"><Text>Ascalon</Text></Row>
+		<Row Tag="TXT_KEY_JERUSALEM_CITY_JAFFA"><Text>Jaffa</Text></Row>
+		<Row Tag="TXT_KEY_JERUSALEM_CITY_CAESAREA"><Text>Caesarea</Text></Row>
+		<Row Tag="TXT_KEY_JERUSALEM_CITY_TYRE"><Text>Tyre</Text></Row>
+		<Row Tag="TXT_KEY_JERUSALEM_CITY_SIDON"><Text>Sidon</Text></Row>
+		<Row Tag="TXT_KEY_JERUSALEM_CITY_BEIRUT"><Text>Beirut</Text></Row>
+		<Row Tag="TXT_KEY_JERUSALEM_CITY_TORTOSA"><Text>Tortosa</Text></Row>
+		<Row Tag="TXT_KEY_JERUSALEM_CITY_LATAKIA"><Text>Latakia</Text></Row>
+		<Row Tag="TXT_KEY_JERUSALEM_CITY_MARGAT"><Text>Margat</Text></Row>
+		<Row Tag="TXT_KEY_JERUSALEM_CITY_KRAK_DES_CHEVALIERS"><Text>Krak des Chevaliers</Text></Row>
+		<Row Tag="TXT_KEY_JERUSALEM_CITY_MONTFORT"><Text>Montfort</Text></Row>
+		<Row Tag="TXT_KEY_JERUSALEM_CITY_KERAK"><Text>Kerak</Text></Row>
+		<Row Tag="TXT_KEY_JERUSALEM_CITY_MONTREAL"><Text>Montreal</Text></Row>
+		<Row Tag="TXT_KEY_JERUSALEM_CITY_BETHLEHEM"><Text>Bethlehem</Text></Row>
+		<Row Tag="TXT_KEY_JERUSALEM_CITY_HEBRON"><Text>Hebron</Text></Row>
+	</Language_en_US>
+</GameData>
