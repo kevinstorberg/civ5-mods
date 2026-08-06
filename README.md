@@ -8,6 +8,7 @@ directory, so the game loads each mod natively while it stays version-controlled
 ## Mods
 
 - **[CrusaderStates](CrusaderStates/)** — Kingdom of Jerusalem, led by Baldwin IV.
+- **[Prussia](Prussia/)** — Prussia, led by Frederick the Great.
 
 ## Adding a mod
 

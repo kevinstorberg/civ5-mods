@@ -1,0 +1,410 @@
+INSERT INTO IconTextureAtlases (
+	Atlas,
+	IconSize,
+	Filename,
+	IconsPerRow,
+	IconsPerColumn
+) VALUES
+	('PRUSSIA_COLOR_ATLAS', 256, 'Prussia_Atlas256.dds', 2, 2),
+	('PRUSSIA_COLOR_ATLAS', 128, 'Prussia_Atlas128.dds', 2, 2),
+	('PRUSSIA_COLOR_ATLAS', 80, 'Prussia_Atlas80.dds', 2, 2),
+	('PRUSSIA_COLOR_ATLAS', 64, 'Prussia_Atlas64.dds', 2, 2),
+	('PRUSSIA_COLOR_ATLAS', 48, 'Prussia_Atlas48.dds', 2, 2),
+	('PRUSSIA_COLOR_ATLAS', 45, 'Prussia_Atlas45.dds', 2, 2),
+	('PRUSSIA_COLOR_ATLAS', 32, 'Prussia_Atlas32.dds', 2, 2),
+	('PRUSSIA_COLOR_ATLAS', 24, 'Prussia_Atlas24.dds', 2, 2),
+	('PRUSSIA_COLOR_ATLAS', 16, 'Prussia_Atlas16.dds', 2, 2),
+	('PRUSSIA_ALPHA_ATLAS', 256, 'Prussia_Alpha256.dds', 2, 2),
+	('PRUSSIA_ALPHA_ATLAS', 128, 'Prussia_Alpha128.dds', 2, 2),
+	('PRUSSIA_ALPHA_ATLAS', 80, 'Prussia_Alpha80.dds', 2, 2),
+	('PRUSSIA_ALPHA_ATLAS', 64, 'Prussia_Alpha64.dds', 2, 2),
+	('PRUSSIA_ALPHA_ATLAS', 48, 'Prussia_Alpha48.dds', 2, 2),
+	('PRUSSIA_ALPHA_ATLAS', 45, 'Prussia_Alpha45.dds', 2, 2),
+	('PRUSSIA_ALPHA_ATLAS', 32, 'Prussia_Alpha32.dds', 2, 2),
+	('PRUSSIA_ALPHA_ATLAS', 24, 'Prussia_Alpha24.dds', 2, 2),
+	('PRUSSIA_ALPHA_ATLAS', 16, 'Prussia_Alpha16.dds', 2, 2);
+
+INSERT INTO Colors (Type, Red, Green, Blue, Alpha) VALUES
+	('COLOR_PLAYER_PRUSSIA_ICON', 0.0, 0.192157, 0.325490, 1.0),
+	('COLOR_PLAYER_PRUSSIA_BACKGROUND', 1.0, 1.0, 1.0, 1.0);
+
+INSERT INTO PlayerColors (Type, PrimaryColor, SecondaryColor, TextColor) VALUES
+	('PLAYERCOLOR_PRUSSIA', 'COLOR_PLAYER_PRUSSIA_ICON', 'COLOR_PLAYER_PRUSSIA_BACKGROUND', 'COLOR_PLAYER_BLACK_TEXT');
+
+INSERT INTO Traits (
+	Type,
+	Description,
+	ShortDescription,
+	GoldenAgeCombatModifier
+) VALUES (
+	'TRAIT_ENLIGHTENED_ABSOLUTISM',
+	'TXT_KEY_TRAIT_ENLIGHTENED_ABSOLUTISM_DESCRIPTION',
+	'TXT_KEY_TRAIT_ENLIGHTENED_ABSOLUTISM',
+	20
+);
+
+INSERT INTO BuildingClasses (
+	Type,
+	Description,
+	DefaultBuilding,
+	NoLimit
+) VALUES (
+	'BUILDINGCLASS_PRUSSIA_ENLIGHTENED_ABSOLUTISM',
+	'TXT_KEY_BUILDING_PRUSSIA_ENLIGHTENED_ABSOLUTISM',
+	'BUILDING_PRUSSIA_ENLIGHTENED_ABSOLUTISM',
+	1
+);
+
+INSERT INTO Buildings (
+	Type,
+	Description,
+	GoldMaintenance,
+	NeverCapture,
+	NukeImmune,
+	Cost,
+	HurryCostModifier,
+	MinAreaSize,
+	ConquestProb,
+	BuildingClass
+) VALUES (
+	'BUILDING_PRUSSIA_ENLIGHTENED_ABSOLUTISM',
+	'TXT_KEY_BUILDING_PRUSSIA_ENLIGHTENED_ABSOLUTISM',
+	0,
+	1,
+	1,
+	-1,
+	-1,
+	-1,
+	0,
+	'BUILDINGCLASS_PRUSSIA_ENLIGHTENED_ABSOLUTISM'
+);
+
+INSERT INTO Building_GlobalYieldModifiers (BuildingType, YieldType, Yield) VALUES
+	('BUILDING_PRUSSIA_ENLIGHTENED_ABSOLUTISM', 'YIELD_SCIENCE', 20);
+
+INSERT INTO Civilizations (
+	Type,
+	Description,
+	Civilopedia,
+	CivilopediaTag,
+	Strategy,
+	Playable,
+	AIPlayable,
+	ShortDescription,
+	Adjective,
+	DefaultPlayerColor,
+	ArtDefineTag,
+	ArtStyleType,
+	ArtStyleSuffix,
+	ArtStylePrefix,
+	DerivativeCiv,
+	PortraitIndex,
+	IconAtlas,
+	AlphaIconAtlas,
+	MapImage,
+	DawnOfManQuote,
+	DawnOfManImage,
+	DawnOfManAudio,
+	PackageID,
+	SoundtrackTag
+)
+SELECT
+	'CIVILIZATION_PRUSSIA',
+	'TXT_KEY_CIV_PRUSSIA_DESC',
+	'TXT_KEY_CIV_PRUSSIA_PEDIA',
+	'TXT_KEY_CIVILOPEDIA_CIVILIZATIONS_PRUSSIA',
+	'TXT_KEY_CIV_PRUSSIA_STRATEGY',
+	1,
+	1,
+	'TXT_KEY_CIV_PRUSSIA_SHORT_DESC',
+	'TXT_KEY_CIV_PRUSSIA_ADJECTIVE',
+	'PLAYERCOLOR_PRUSSIA',
+	ArtDefineTag,
+	ArtStyleType,
+	'_EURO',
+	ArtStylePrefix,
+	'CIVILIZATION_GERMANY',
+	0,
+	'PRUSSIA_COLOR_ATLAS',
+	'PRUSSIA_ALPHA_ATLAS',
+	'MapPrussia.dds',
+	'TXT_KEY_CIV_PRUSSIA_DOM',
+	'Prussia_DOM.dds',
+	DawnOfManAudio,
+	PackageID,
+	SoundtrackTag
+FROM Civilizations
+WHERE Type = 'CIVILIZATION_GERMANY';
+
+UPDATE Civilizations
+SET ArtStyleSuffix = '_GERMANY'
+WHERE Type = 'CIVILIZATION_PRUSSIA'
+	AND EXISTS (
+		SELECT 1
+		FROM ArtDefine_UnitInfos
+		WHERE Type = 'ART_DEF_UNIT_LONGSWORDSMAN_GERMANY'
+	);
+
+INSERT INTO Leaders (
+	Type,
+	Description,
+	Civilopedia,
+	CivilopediaTag,
+	ArtDefineTag,
+	VictoryCompetitiveness,
+	WonderCompetitiveness,
+	MinorCivCompetitiveness,
+	Boldness,
+	DiploBalance,
+	WarmongerHate,
+	WorkAgainstWillingness,
+	WorkWithWillingness,
+	DenounceWillingness,
+	DoFWillingness,
+	Loyalty,
+	Neediness,
+	Forgiveness,
+	Chattiness,
+	Meanness,
+	PortraitIndex,
+	IconAtlas,
+	PackageID
+)
+SELECT
+	'LEADER_FREDERICK_THE_GREAT',
+	'TXT_KEY_LEADER_FREDERICK_THE_GREAT',
+	'TXT_KEY_LEADER_FREDERICK_THE_GREAT_PEDIA',
+	'TXT_KEY_CIVILOPEDIA_LEADERS_FREDERICK_THE_GREAT',
+	'Frederick_scene.xml',
+	8,
+	WonderCompetitiveness,
+	MinorCivCompetitiveness,
+	8,
+	DiploBalance,
+	5,
+	WorkAgainstWillingness,
+	WorkWithWillingness,
+	DenounceWillingness,
+	DoFWillingness,
+	Loyalty,
+	Neediness,
+	Forgiveness,
+	Chattiness,
+	Meanness,
+	1,
+	'PRUSSIA_COLOR_ATLAS',
+	PackageID
+FROM Leaders
+WHERE Type = 'LEADER_BISMARCK';
+
+INSERT INTO Leader_MajorCivApproachBiases (LeaderType, MajorCivApproachType, Bias)
+SELECT 'LEADER_FREDERICK_THE_GREAT', MajorCivApproachType, Bias
+FROM Leader_MajorCivApproachBiases
+WHERE LeaderType = 'LEADER_BISMARCK';
+
+INSERT INTO Leader_MinorCivApproachBiases (LeaderType, MinorCivApproachType, Bias)
+SELECT 'LEADER_FREDERICK_THE_GREAT', MinorCivApproachType, Bias
+FROM Leader_MinorCivApproachBiases
+WHERE LeaderType = 'LEADER_BISMARCK';
+
+INSERT INTO Leader_Flavors (LeaderType, FlavorType, Flavor)
+SELECT 'LEADER_FREDERICK_THE_GREAT', FlavorType, Flavor
+FROM Leader_Flavors
+WHERE LeaderType = 'LEADER_BISMARCK';
+
+UPDATE Leader_Flavors SET Flavor = 9
+WHERE LeaderType = 'LEADER_FREDERICK_THE_GREAT' AND FlavorType = 'FLAVOR_SCIENCE';
+UPDATE Leader_Flavors SET Flavor = 10
+WHERE LeaderType = 'LEADER_FREDERICK_THE_GREAT' AND FlavorType = 'FLAVOR_MILITARY_TRAINING';
+UPDATE Leader_Flavors SET Flavor = 9
+WHERE LeaderType = 'LEADER_FREDERICK_THE_GREAT' AND FlavorType = 'FLAVOR_PRODUCTION';
+UPDATE Leader_Flavors SET Flavor = 8
+WHERE LeaderType = 'LEADER_FREDERICK_THE_GREAT' AND FlavorType = 'FLAVOR_HAPPINESS';
+UPDATE Leader_Flavors SET Flavor = 7
+WHERE LeaderType = 'LEADER_FREDERICK_THE_GREAT' AND FlavorType = 'FLAVOR_GREAT_PEOPLE';
+UPDATE Leader_Flavors SET Flavor = 8
+WHERE LeaderType = 'LEADER_FREDERICK_THE_GREAT' AND FlavorType = 'FLAVOR_OFFENSE';
+UPDATE Leader_Flavors SET Flavor = 8
+WHERE LeaderType = 'LEADER_FREDERICK_THE_GREAT' AND FlavorType = 'FLAVOR_DEFENSE';
+
+INSERT INTO Diplomacy_Responses (LeaderType, ResponseType, Response, Bias) VALUES
+	('LEADER_FREDERICK_THE_GREAT', 'RESPONSE_DEFEATED', 'TXT_KEY_LEADER_FREDERICK_THE_GREAT_DEFEATED%', 1),
+	('LEADER_FREDERICK_THE_GREAT', 'RESPONSE_EXPANSION_SERIOUS_WARNING', 'TXT_KEY_LEADER_FREDERICK_THE_GREAT_EXPANSION_SERIOUS_WARNING%', 1),
+	('LEADER_FREDERICK_THE_GREAT', 'RESPONSE_FIRST_GREETING', 'TXT_KEY_LEADER_FREDERICK_THE_GREAT_FIRST_GREETING%', 1),
+	('LEADER_FREDERICK_THE_GREAT', 'RESPONSE_GREETING_HOSTILE_HELLO', 'TXT_KEY_LEADER_FREDERICK_THE_GREAT_GREETING_HOSTILE_HELLO%', 1),
+	('LEADER_FREDERICK_THE_GREAT', 'RESPONSE_GREETING_NEUTRAL_HELLO', 'TXT_KEY_LEADER_FREDERICK_THE_GREAT_GREETING_NEUTRAL_HELLO%', 1),
+	('LEADER_FREDERICK_THE_GREAT', 'RESPONSE_GREETING_POLITE_HELLO', 'TXT_KEY_LEADER_FREDERICK_THE_GREAT_GREETING_POLITE_HELLO%', 1),
+	('LEADER_FREDERICK_THE_GREAT', 'RESPONSE_HOSTILE_AGGRESSIVE_MILITARY_WARNING', 'TXT_KEY_LEADER_FREDERICK_THE_GREAT_HOSTILE_AGGRESSIVE_MILITARY_WARNING%', 1),
+	('LEADER_FREDERICK_THE_GREAT', 'RESPONSE_LUXURY_TRADE', 'TXT_KEY_LEADER_FREDERICK_THE_GREAT_LUXURY_TRADE%', 1),
+	('LEADER_FREDERICK_THE_GREAT', 'RESPONSE_OPEN_BORDERS_EXCHANGE', 'TXT_KEY_LEADER_FREDERICK_THE_GREAT_OPEN_BORDERS_EXCHANGE%', 1),
+	('LEADER_FREDERICK_THE_GREAT', 'RESPONSE_REQUEST', 'TXT_KEY_LEADER_FREDERICK_THE_GREAT_RESPONSE_REQUEST%', 1);
+
+INSERT INTO Civilization_Leaders (CivilizationType, LeaderheadType) VALUES
+	('CIVILIZATION_PRUSSIA', 'LEADER_FREDERICK_THE_GREAT');
+
+INSERT INTO Leader_Traits (LeaderType, TraitType) VALUES
+	('LEADER_FREDERICK_THE_GREAT', 'TRAIT_ENLIGHTENED_ABSOLUTISM');
+
+INSERT INTO Civilization_FreeBuildingClasses (CivilizationType, BuildingClassType) VALUES
+	('CIVILIZATION_PRUSSIA', 'BUILDINGCLASS_PALACE');
+
+INSERT INTO Civilization_FreeTechs (CivilizationType, TechType) VALUES
+	('CIVILIZATION_PRUSSIA', 'TECH_AGRICULTURE');
+
+INSERT INTO Civilization_FreeUnits (CivilizationType, UnitClassType, UnitAIType, Count) VALUES
+	('CIVILIZATION_PRUSSIA', 'UNITCLASS_SETTLER', 'UNITAI_SETTLE', 1);
+
+INSERT INTO Civilization_Religions (CivilizationType, ReligionType) VALUES
+	('CIVILIZATION_PRUSSIA', 'RELIGION_PROTESTANTISM');
+
+INSERT INTO Civilization_SpyNames (CivilizationType, SpyName)
+SELECT 'CIVILIZATION_PRUSSIA', SpyName
+FROM Civilization_SpyNames
+WHERE CivilizationType = 'CIVILIZATION_GERMANY';
+
+INSERT INTO Civilization_CityNames (CivilizationType, CityName) VALUES
+	('CIVILIZATION_PRUSSIA', 'TXT_KEY_PRUSSIA_CITY_BERLIN'),
+	('CIVILIZATION_PRUSSIA', 'TXT_KEY_PRUSSIA_CITY_KONIGSBERG'),
+	('CIVILIZATION_PRUSSIA', 'TXT_KEY_PRUSSIA_CITY_POTSDAM'),
+	('CIVILIZATION_PRUSSIA', 'TXT_KEY_PRUSSIA_CITY_BRESLAU'),
+	('CIVILIZATION_PRUSSIA', 'TXT_KEY_PRUSSIA_CITY_MAGDEBURG'),
+	('CIVILIZATION_PRUSSIA', 'TXT_KEY_PRUSSIA_CITY_STETTIN'),
+	('CIVILIZATION_PRUSSIA', 'TXT_KEY_PRUSSIA_CITY_DANZIG'),
+	('CIVILIZATION_PRUSSIA', 'TXT_KEY_PRUSSIA_CITY_HALLE'),
+	('CIVILIZATION_PRUSSIA', 'TXT_KEY_PRUSSIA_CITY_FRANKFURT_ODER'),
+	('CIVILIZATION_PRUSSIA', 'TXT_KEY_PRUSSIA_CITY_MEMEL'),
+	('CIVILIZATION_PRUSSIA', 'TXT_KEY_PRUSSIA_CITY_TILSIT'),
+	('CIVILIZATION_PRUSSIA', 'TXT_KEY_PRUSSIA_CITY_ELBING'),
+	('CIVILIZATION_PRUSSIA', 'TXT_KEY_PRUSSIA_CITY_THORN'),
+	('CIVILIZATION_PRUSSIA', 'TXT_KEY_PRUSSIA_CITY_KOLBERG'),
+	('CIVILIZATION_PRUSSIA', 'TXT_KEY_PRUSSIA_CITY_BRANDENBURG'),
+	('CIVILIZATION_PRUSSIA', 'TXT_KEY_PRUSSIA_CITY_COTTBUS'),
+	('CIVILIZATION_PRUSSIA', 'TXT_KEY_PRUSSIA_CITY_GLOGAU'),
+	('CIVILIZATION_PRUSSIA', 'TXT_KEY_PRUSSIA_CITY_NEISSE'),
+	('CIVILIZATION_PRUSSIA', 'TXT_KEY_PRUSSIA_CITY_GRAUDENZ'),
+	('CIVILIZATION_PRUSSIA', 'TXT_KEY_PRUSSIA_CITY_KUSTRIN');
+
+INSERT INTO Civilization_Start_Region_Priority (CivilizationType, RegionType) VALUES
+	('CIVILIZATION_PRUSSIA', 'REGION_PLAINS');
+
+CREATE TEMP TABLE PrussiaGeneralStaffOfficer AS
+SELECT *
+FROM Units
+WHERE Type = 'UNIT_GREAT_GENERAL';
+
+UPDATE PrussiaGeneralStaffOfficer
+SET ID = NULL,
+	Type = 'UNIT_PRUSSIA_GENERAL_STAFF_OFFICER',
+	Description = 'TXT_KEY_UNIT_PRUSSIA_GENERAL_STAFF_OFFICER',
+	Civilopedia = 'TXT_KEY_UNIT_PRUSSIA_GENERAL_STAFF_OFFICER_PEDIA',
+	Strategy = 'TXT_KEY_UNIT_PRUSSIA_GENERAL_STAFF_OFFICER_STRATEGY',
+	Help = 'TXT_KEY_UNIT_PRUSSIA_GENERAL_STAFF_OFFICER_HELP',
+	BaseBeakersTurnsToCount = 8,
+	UnitFlagIconOffset = 0,
+	PortraitIndex = 2,
+	IconAtlas = 'PRUSSIA_COLOR_ATLAS',
+	UnitFlagAtlas = 'PRUSSIA_ALPHA_ATLAS';
+
+INSERT INTO Units
+SELECT *
+FROM PrussiaGeneralStaffOfficer;
+
+DROP TABLE PrussiaGeneralStaffOfficer;
+
+INSERT INTO Unit_AITypes (UnitType, UnitAIType)
+SELECT 'UNIT_PRUSSIA_GENERAL_STAFF_OFFICER', UnitAIType
+FROM Unit_AITypes
+WHERE UnitType = 'UNIT_GREAT_GENERAL';
+
+INSERT INTO Unit_Flavors (UnitType, FlavorType, Flavor)
+SELECT 'UNIT_PRUSSIA_GENERAL_STAFF_OFFICER', FlavorType, Flavor
+FROM Unit_Flavors
+WHERE UnitType = 'UNIT_GREAT_GENERAL';
+
+INSERT INTO Unit_FreePromotions (UnitType, PromotionType)
+SELECT 'UNIT_PRUSSIA_GENERAL_STAFF_OFFICER', PromotionType
+FROM Unit_FreePromotions
+WHERE UnitType = 'UNIT_GREAT_GENERAL';
+
+INSERT INTO Unit_Builds (UnitType, BuildType)
+SELECT 'UNIT_PRUSSIA_GENERAL_STAFF_OFFICER', BuildType
+FROM Unit_Builds
+WHERE UnitType = 'UNIT_GREAT_GENERAL';
+
+INSERT INTO UnitGameplay2DScripts (UnitType, SelectionSound, FirstSelectionSound)
+SELECT 'UNIT_PRUSSIA_GENERAL_STAFF_OFFICER', SelectionSound, FirstSelectionSound
+FROM UnitGameplay2DScripts
+WHERE UnitType = 'UNIT_GREAT_GENERAL';
+
+INSERT INTO Unit_UniqueNames (UnitType, UniqueName, GreatWorkType)
+SELECT 'UNIT_PRUSSIA_GENERAL_STAFF_OFFICER', UniqueName, GreatWorkType
+FROM Unit_UniqueNames
+WHERE UnitType = 'UNIT_GREAT_GENERAL';
+
+INSERT INTO Civilization_UnitClassOverrides (
+	CivilizationType,
+	UnitClassType,
+	UnitType
+) VALUES (
+	'CIVILIZATION_PRUSSIA',
+	'UNITCLASS_GREAT_GENERAL',
+	'UNIT_PRUSSIA_GENERAL_STAFF_OFFICER'
+);
+
+CREATE TEMP TABLE PrussiaStaffCollege AS
+SELECT *
+FROM Buildings
+WHERE Type = 'BUILDING_HEROIC_EPIC';
+
+UPDATE PrussiaStaffCollege
+SET ID = NULL,
+	Type = 'BUILDING_PRUSSIA_STAFF_COLLEGE',
+	Description = 'TXT_KEY_BUILDING_PRUSSIA_STAFF_COLLEGE',
+	Civilopedia = 'TXT_KEY_BUILDING_PRUSSIA_STAFF_COLLEGE_PEDIA',
+	Strategy = 'TXT_KEY_BUILDING_PRUSSIA_STAFF_COLLEGE_STRATEGY',
+	Help = 'TXT_KEY_BUILDING_PRUSSIA_STAFF_COLLEGE_HELP',
+	PortraitIndex = 3,
+	IconAtlas = 'PRUSSIA_COLOR_ATLAS';
+
+INSERT INTO Buildings
+SELECT *
+FROM PrussiaStaffCollege;
+
+DROP TABLE PrussiaStaffCollege;
+
+INSERT INTO Building_ClassesNeededInCity (BuildingType, BuildingClassType)
+SELECT 'BUILDING_PRUSSIA_STAFF_COLLEGE', BuildingClassType
+FROM Building_ClassesNeededInCity
+WHERE BuildingType = 'BUILDING_HEROIC_EPIC';
+
+INSERT INTO Building_Flavors (BuildingType, FlavorType, Flavor)
+SELECT 'BUILDING_PRUSSIA_STAFF_COLLEGE', FlavorType, Flavor
+FROM Building_Flavors
+WHERE BuildingType = 'BUILDING_HEROIC_EPIC';
+
+INSERT INTO Building_PrereqBuildingClasses (
+	BuildingType,
+	BuildingClassType,
+	NumBuildingNeeded
+)
+SELECT
+	'BUILDING_PRUSSIA_STAFF_COLLEGE',
+	BuildingClassType,
+	NumBuildingNeeded
+FROM Building_PrereqBuildingClasses
+WHERE BuildingType = 'BUILDING_HEROIC_EPIC';
+
+INSERT INTO Building_YieldChanges (BuildingType, YieldType, Yield)
+SELECT 'BUILDING_PRUSSIA_STAFF_COLLEGE', YieldType, Yield
+FROM Building_YieldChanges
+WHERE BuildingType = 'BUILDING_HEROIC_EPIC';
+
+INSERT INTO Civilization_BuildingClassOverrides (
+	CivilizationType,
+	BuildingClassType,
+	BuildingType
+) VALUES (
+	'CIVILIZATION_PRUSSIA',
+	'BUILDINGCLASS_HEROIC_EPIC',
+	'BUILDING_PRUSSIA_STAFF_COLLEGE'
+);

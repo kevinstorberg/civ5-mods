@@ -6,3 +6,7 @@
 !/.gitignore
 !/README.md
 !/CrusaderStates/
+!/Prussia/
+
+**/__pycache__/
+*.py[cod]
