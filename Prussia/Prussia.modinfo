@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="f6c68b43-a3c3-4c03-8ca2-39f1dde1f302" version="1">
+	<Properties>
+		<Name>Prussia</Name>
+		<Stability>Alpha</Stability>
+		<Teaser>Lead Prussia under Frederick the Great.</Teaser>
+		<Description>Adds Prussia, led by Frederick the Great, as a playable civilization for Brave New World. Ethnic Units v31 is supported when enabled but is never required.</Description>
+		<Authors>Kevin Storberg</Authors>
+		<HideSetupGame>0</HideSetupGame>
+		<AffectsSavedGames>1</AffectsSavedGames>
+		<MinCompatibleSaveVersion>0</MinCompatibleSaveVersion>
+		<SupportsSinglePlayer>1</SupportsSinglePlayer>
+		<SupportsMultiplayer>0</SupportsMultiplayer>
+		<SupportsHotSeat>0</SupportsHotSeat>
+		<SupportsMac>1</SupportsMac>
+		<ReloadAudioSystem>0</ReloadAudioSystem>
+		<ReloadLandmarkSystem>0</ReloadLandmarkSystem>
+		<ReloadStrategicViewSystem>0</ReloadStrategicViewSystem>
+		<ReloadUnitSystem>0</ReloadUnitSystem>
+	</Properties>
+	<Dependencies>
+		<Dlc id="6DA07636-4123-4018-B643-6575B4EC336B" minversion="0" maxversion="999" />
+	</Dependencies>
+	<References>
+		<Mod id="7fdd72a5-d4ae-441c-bc4e-2e3d2a26cff4" minversion="31" maxversion="999" title="Ethnic Units" />
+	</References>
+	<Blocks />
+	<Files>
+		<File md5="a885d3c1d085d303865af1c9b87f17a9" import="1">Art/Frederick_scene.dds</File>
+		<File md5="ee6e43e09f4da9ba68e84ebee3e06e75" import="1">Art/Frederick_scene.xml</File>
+		<File md5="a663ce953abf3b97636509903f02b60b" import="1">Art/MapPrussia.dds</File>
+		<File md5="e2a7ce679ff4960ef00bf2d175d77924" import="1">Art/Prussia_Alpha128.dds</File>
+		<File md5="7bf4ed77ee34bb11d619911fa2514f19" import="1">Art/Prussia_Alpha16.dds</File>
+		<File md5="60c9f7472fe35a3b9b01e90c8161f2ff" import="1">Art/Prussia_Alpha24.dds</File>
+		<File md5="6d2b3cb00684f3cbe2f39a991fecd0df" import="1">Art/Prussia_Alpha256.dds</File>
+		<File md5="a3beba25ce4663bf60b44826881624bd" import="1">Art/Prussia_Alpha32.dds</File>
+		<File md5="36384bf44d703d7d6b258b6dff07e2ee" import="1">Art/Prussia_Alpha45.dds</File>
+		<File md5="732a2f8d237653d612e5fccd42c5e0b3" import="1">Art/Prussia_Alpha48.dds</File>
+		<File md5="604ac2b0b38e8a3c78b6b1e28b05b4e3" import="1">Art/Prussia_Alpha64.dds</File>
+		<File md5="3c5eaed995c842f4e3628e71ef42a91a" import="1">Art/Prussia_Alpha80.dds</File>
+		<File md5="e3b575004ca01798752e49ad6befa19f" import="1">Art/Prussia_Atlas128.dds</File>
+		<File md5="e8d2c0e4e8b4f5f8f6944943fc4595fb" import="1">Art/Prussia_Atlas16.dds</File>
+		<File md5="af07ed7a06d229d9c7f18f849b870413" import="1">Art/Prussia_Atlas24.dds</File>
+		<File md5="6899ef36980d601815700ff87425a8e1" import="1">Art/Prussia_Atlas256.dds</File>
+		<File md5="5c3067d1626f97b461772fd04db9116f" import="1">Art/Prussia_Atlas32.dds</File>
+		<File md5="f8ee9df3718493cf6387e416957ad2ee" import="1">Art/Prussia_Atlas45.dds</File>
+		<File md5="504dce46fef0550bc1c8ab1f5e138a5a" import="1">Art/Prussia_Atlas48.dds</File>
+		<File md5="97f9e568ae4d0a75014150a7791a8eac" import="1">Art/Prussia_Atlas64.dds</File>
+		<File md5="4f218f951d7ec214567c8f6d6c3bc863" import="1">Art/Prussia_Atlas80.dds</File>
+		<File md5="580fff9ae703be497dbdfca84f80fe44" import="1">Art/Prussia_DOM.dds</File>
+		<File md5="2b5a45247e5cfb79e31c244c11b8fa36" import="0">CREDITS.md</File>
+		<File md5="2a2522e1936d1b1ec4d1fa1761a6c22c" import="0">Lua/Prussia.lua</File>
+		<File md5="4c5f608b40bf7d944c89ce67e1897f44" import="0">README.md</File>
+		<File md5="cb9c5b701b937b71387f3791f3748111" import="0">SQL/Prussia.sql</File>
+		<File md5="b54c5600d216b39f3b2349e5fe9212a6" import="0">Text_en_US.xml</File>
+	</Files>
+	<Actions>
+		<OnModActivated>
+			<UpdateDatabase>SQL/Prussia.sql</UpdateDatabase>
+			<UpdateDatabase>Text_en_US.xml</UpdateDatabase>
+		</OnModActivated>
+	</Actions>
+	<EntryPoints>
+		<EntryPoint type="InGameUIAddin" file="Lua/Prussia.lua">
+			<Name>Prussia Gameplay</Name>
+			<Description>Implements Prussia's unique gameplay mechanics.</Description>
+		</EntryPoint>
+	</EntryPoints>
+</Mod>

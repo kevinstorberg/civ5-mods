@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<Language_en_US>
+		<Row Tag="TXT_KEY_CIV_PRUSSIA_DESC"><Text>Prussia</Text></Row>
+		<Row Tag="TXT_KEY_CIV_PRUSSIA_SHORT_DESC"><Text>Prussia</Text></Row>
+		<Row Tag="TXT_KEY_CIV_PRUSSIA_ADJECTIVE"><Text>Prussian</Text></Row>
+		<Row Tag="TXT_KEY_CIV_PRUSSIA_PEDIA"><Text>The Kingdom of Prussia emerged as a major European power through disciplined administration, military reform, and the ambitions of the Hohenzollern monarchy. Under Frederick II, Prussia combined an army of exceptional efficiency with a court shaped by the European Enlightenment.</Text></Row>
+		<Row Tag="TXT_KEY_CIVILOPEDIA_CIVILIZATIONS_PRUSSIA"><Text>Prussia</Text></Row>
+		<Row Tag="TXT_KEY_CIV_PRUSSIA_STRATEGY"><Text>Prussia turns Golden Ages into periods of exceptional scientific and military strength. Time Golden Ages for decisive campaigns, train elite forces in the Staff College, and decide whether each General Staff Officer is worth more on the battlefield or as an immediate scientific breakthrough.</Text></Row>
+		<Row Tag="TXT_KEY_CIV_PRUSSIA_DOM"><Text>Frederick the Great, philosopher-king of Prussia, history remembers both your cultivated mind and your iron resolve. Enlighten your state, perfect your army, and make Prussia the arbiter of Europe.</Text></Row>
+
+		<Row Tag="TXT_KEY_LEADER_FREDERICK_THE_GREAT"><Text>Frederick the Great</Text></Row>
+		<Row Tag="TXT_KEY_LEADER_FREDERICK_THE_GREAT_PEDIA"><Text>Frederick II (1712–1786) ruled Prussia from 1740 until his death. An accomplished musician and correspondent of Enlightenment thinkers, he also transformed Prussia into a great power through administrative reform and a succession of hard-fought wars.</Text></Row>
+		<Row Tag="TXT_KEY_CIVILOPEDIA_LEADERS_FREDERICK_THE_GREAT"><Text>Frederick the Great</Text></Row>
+
+		<Row Tag="TXT_KEY_TRAIT_ENLIGHTENED_ABSOLUTISM"><Text>Enlightened Absolutism</Text></Row>
+		<Row Tag="TXT_KEY_TRAIT_ENLIGHTENED_ABSOLUTISM_DESCRIPTION"><Text>During a Golden Age, gain +20% [ICON_RESEARCH] Science and +20% [ICON_STRENGTH] Combat Strength for all military units.</Text></Row>
+		<Row Tag="TXT_KEY_BUILDING_PRUSSIA_ENLIGHTENED_ABSOLUTISM"><Text>Enlightened Absolutism Science</Text></Row>
+
+		<Row Tag="TXT_KEY_UNIT_PRUSSIA_GENERAL_STAFF_OFFICER"><Text>General Staff Officer</Text></Row>
+		<Row Tag="TXT_KEY_UNIT_PRUSSIA_GENERAL_STAFF_OFFICER_PEDIA"><Text>The Prussian General Staff developed from institutions that selected, educated, and assigned officers for the detailed planning of campaigns. Its officers turned professional study, mapping, and logistics into instruments of state power.</Text></Row>
+		<Row Tag="TXT_KEY_UNIT_PRUSSIA_GENERAL_STAFF_OFFICER_STRATEGY"><Text>The General Staff Officer replaces the Great General. It projects Leadership and may construct a Citadel as normal, or it may be expended for the same research boost as a Great Scientist. It cannot construct an Academy.</Text></Row>
+		<Row Tag="TXT_KEY_UNIT_PRUSSIA_GENERAL_STAFF_OFFICER_HELP"><Text>Prussian unique Great Person replacing the Great General. Provides the normal Great General combat bonus to nearby units and may construct a Citadel. May instead be expended to provide the full Great Scientist research boost. Cannot construct an Academy.</Text></Row>
+
+		<Row Tag="TXT_KEY_BUILDING_PRUSSIA_STAFF_COLLEGE"><Text>Staff College</Text></Row>
+		<Row Tag="TXT_KEY_BUILDING_PRUSSIA_STAFF_COLLEGE_PEDIA"><Text>The Prussian Kriegsakademie trained selected officers in military history, strategy, tactics, geography, and administration. Its graduates formed the intellectual core of a professional officer corps and the later General Staff.</Text></Row>
+		<Row Tag="TXT_KEY_BUILDING_PRUSSIA_STAFF_COLLEGE_STRATEGY"><Text>The Staff College replaces the Heroic Epic and retains all of its normal effects. Land and naval combat units trained or purchased in this city receive Morale, Leadership, and Great Generals II, and keep these promotions when upgraded.</Text></Row>
+		<Row Tag="TXT_KEY_BUILDING_PRUSSIA_STAFF_COLLEGE_HELP"><Text>Replaces the Heroic Epic. Provides all normal Heroic Epic effects. Land and naval combat units trained or purchased in this city receive Morale, Leadership, and Great Generals II. These promotions are retained upon upgrade.</Text></Row>
+
+		<Row Tag="TXT_KEY_LEADER_FREDERICK_THE_GREAT_DEFEATED_1"><Text>Fortune has decided against me. Use your victory more wisely than most princes would.</Text></Row>
+		<Row Tag="TXT_KEY_LEADER_FREDERICK_THE_GREAT_EXPANSION_SERIOUS_WARNING_1"><Text>Your appetite for land is becoming impossible to ignore. Prussia will not watch in silence.</Text></Row>
+		<Row Tag="TXT_KEY_LEADER_FREDERICK_THE_GREAT_FIRST_GREETING_1"><Text>I am Frederick of Prussia. Let us discover whether reason can govern relations between sovereigns.</Text></Row>
+		<Row Tag="TXT_KEY_LEADER_FREDERICK_THE_GREAT_GREETING_HOSTILE_HELLO_1"><Text>You return. I had hoped necessity would spare me the conversation.</Text></Row>
+		<Row Tag="TXT_KEY_LEADER_FREDERICK_THE_GREAT_GREETING_NEUTRAL_HELLO_1"><Text>State your business plainly.</Text></Row>
+		<Row Tag="TXT_KEY_LEADER_FREDERICK_THE_GREAT_GREETING_POLITE_HELLO_1"><Text>Welcome. A capable ruler is always worth hearing.</Text></Row>
+		<Row Tag="TXT_KEY_LEADER_FREDERICK_THE_GREAT_HOSTILE_AGGRESSIVE_MILITARY_WARNING_1"><Text>Your soldiers crowd my frontier. Withdraw them, or accept the conclusion any prudent king would draw.</Text></Row>
+		<Row Tag="TXT_KEY_LEADER_FREDERICK_THE_GREAT_LUXURY_TRADE_1"><Text>Prussia can supply this luxury. What will you offer in return?</Text></Row>
+		<Row Tag="TXT_KEY_LEADER_FREDERICK_THE_GREAT_OPEN_BORDERS_EXCHANGE_1"><Text>Open borders would serve us both, provided neither mistakes courtesy for weakness.</Text></Row>
+		<Row Tag="TXT_KEY_LEADER_FREDERICK_THE_GREAT_RESPONSE_REQUEST_1"><Text>I have a proposal that should interest a rational sovereign.</Text></Row>
+
+		<Row Tag="TXT_KEY_PRUSSIA_CITY_BERLIN"><Text>Berlin</Text></Row>
+		<Row Tag="TXT_KEY_PRUSSIA_CITY_KONIGSBERG"><Text>Königsberg</Text></Row>
+		<Row Tag="TXT_KEY_PRUSSIA_CITY_POTSDAM"><Text>Potsdam</Text></Row>
+		<Row Tag="TXT_KEY_PRUSSIA_CITY_BRESLAU"><Text>Breslau</Text></Row>
+		<Row Tag="TXT_KEY_PRUSSIA_CITY_MAGDEBURG"><Text>Magdeburg</Text></Row>
+		<Row Tag="TXT_KEY_PRUSSIA_CITY_STETTIN"><Text>Stettin</Text></Row>
+		<Row Tag="TXT_KEY_PRUSSIA_CITY_DANZIG"><Text>Danzig</Text></Row>
+		<Row Tag="TXT_KEY_PRUSSIA_CITY_HALLE"><Text>Halle</Text></Row>
+		<Row Tag="TXT_KEY_PRUSSIA_CITY_FRANKFURT_ODER"><Text>Frankfurt an der Oder</Text></Row>
+		<Row Tag="TXT_KEY_PRUSSIA_CITY_MEMEL"><Text>Memel</Text></Row>
+		<Row Tag="TXT_KEY_PRUSSIA_CITY_TILSIT"><Text>Tilsit</Text></Row>
+		<Row Tag="TXT_KEY_PRUSSIA_CITY_ELBING"><Text>Elbing</Text></Row>
+		<Row Tag="TXT_KEY_PRUSSIA_CITY_THORN"><Text>Thorn</Text></Row>
+		<Row Tag="TXT_KEY_PRUSSIA_CITY_KOLBERG"><Text>Kolberg</Text></Row>
+		<Row Tag="TXT_KEY_PRUSSIA_CITY_BRANDENBURG"><Text>Brandenburg</Text></Row>
+		<Row Tag="TXT_KEY_PRUSSIA_CITY_COTTBUS"><Text>Cottbus</Text></Row>
+		<Row Tag="TXT_KEY_PRUSSIA_CITY_GLOGAU"><Text>Glogau</Text></Row>
+		<Row Tag="TXT_KEY_PRUSSIA_CITY_NEISSE"><Text>Neisse</Text></Row>
+		<Row Tag="TXT_KEY_PRUSSIA_CITY_GRAUDENZ"><Text>Graudenz</Text></Row>
+		<Row Tag="TXT_KEY_PRUSSIA_CITY_KUSTRIN"><Text>Küstrin</Text></Row>
+	</Language_en_US>
+</GameData>
